@@ -19,7 +19,7 @@ def retry(num_retry, sleep_sec):
             """A wrapper function"""
             for retry_num in range(1, num_retry):
                 try:
-                    func(*args, **kwargs)
+                    return func(*args, **kwargs)
                 except Exception as e:
                     print("Number of retry ", retry_num)
                     sleep(sleep_sec)
